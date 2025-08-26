@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8E55DF142E5E0DDE008187F9 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 8E55DF132E5E0DDE008187F9 /* RiveRuntime */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8E13F4462E5E092100E7F3F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -45,6 +49,11 @@
 			path = RiveTestUITests;
 			sourceTree = "<group>";
 		};
+		8E55DF092E5E0C69008187F9 /* Resources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E55DF142E5E0DDE008187F9 /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +85,11 @@
 		8E13F42D2E5E092000E7F3F4 = {
 			isa = PBXGroup;
 			children = (
+				8E55DF092E5E0C69008187F9 /* Resources */,
 				8E13F4382E5E092000E7F3F4 /* RiveTest */,
 				8E13F4482E5E092100E7F3F4 /* RiveTestTests */,
 				8E13F4522E5E092100E7F3F4 /* RiveTestUITests */,
+				8E55DF0C2E5E0D1E008187F9 /* Frameworks */,
 				8E13F4372E5E092000E7F3F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +102,13 @@
 				8E13F44F2E5E092100E7F3F4 /* RiveTestUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8E55DF0C2E5E0D1E008187F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,9 +128,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				8E13F4382E5E092000E7F3F4 /* RiveTest */,
+				8E55DF092E5E0C69008187F9 /* Resources */,
 			);
 			name = RiveTest;
 			packageProductDependencies = (
+				8E55DF132E5E0DDE008187F9 /* RiveRuntime */,
 			);
 			productName = RiveTest;
 			productReference = 8E13F4362E5E092000E7F3F4 /* RiveTest.app */;
@@ -195,6 +216,9 @@
 			);
 			mainGroup = 8E13F42D2E5E092000E7F3F4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8E55DF122E5E0DDE008187F9 /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8E13F4372E5E092000E7F3F4 /* Products */;
 			projectDirPath = "";
@@ -558,6 +582,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E55DF122E5E0DDE008187F9 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.11.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E55DF132E5E0DDE008187F9 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E55DF122E5E0DDE008187F9 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E13F42E2E5E092000E7F3F4 /* Project object */;
 }

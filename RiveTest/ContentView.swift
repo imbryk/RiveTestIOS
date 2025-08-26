@@ -6,11 +6,30 @@
 //
 
 import SwiftUI
+import RiveRuntime
 
 struct ContentView: View {
     var body: some View {
-        Color.gray
-            .ignoresSafeArea()
+        RiveAnimationView()
+    }
+}
+
+private struct RiveAnimationView: View {
+    let viewModel = RiveViewModel(
+        fileName: "vm_initial",
+        fit: .layout,
+        autoPlay: true
+    )
+    
+    init () {
+        viewModel.riveModel?.enableAutoBind { instance in
+            // noop
+        }
+
+    }
+    
+    var body: some View {
+        viewModel.view()
     }
 }
 
