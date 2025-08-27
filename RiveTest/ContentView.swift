@@ -27,18 +27,10 @@ private struct RiveAnimationView: View {
     
     private let dragKey = "dragging"
     
-    let viewModel = RiveViewModel(
-        fileName: "vm_initial",
-        fit: .layout,
-        autoPlay: true
-    )
+    let viewModel = CustomRiveViewModel(x:300, y:300)
     
     var body: some View {
         viewModel.view()
-            .onAppear {
-                loadData()
-                setupRive()
-            }
     }
     
     private func loadData() {
