@@ -60,6 +60,15 @@ private struct RiveAnimationView: View {
     private func setupRive() {
         guard let riveModel = viewModel.riveModel else { return }
         
+        
+        let file = riveModel.riveFile
+
+        let viewModelByIndex = file.viewModel(at: 0)
+        let instance = viewModelByIndex!.createDefaultInstance()!;
+        
+//        logger.debug("got default instance x: \(instance.numberProperty(fromPath: "pos x")!.value)")
+//        logger.debug("got default instance y: \(instance.numberProperty(fromPath: "pos x")!.value)")
+//        logger.debug("got default instance drag: \(instance.booleanProperty(fromPath: dragKey)!.value)")
         // Enable auto-binding for state machine
         riveModel.enableAutoBind { instance in
             logger.debug("TEST: position in vm: \(instance.numberProperty(fromPath: "pos x")!.value), \(instance.numberProperty(fromPath: "pos y")!.value)")
@@ -87,6 +96,9 @@ private struct RiveAnimationView: View {
                 logger.debug("TEST: position y in vm: \(newY)")
                 self.y = newY
             }
+//            instance.numberProperty(fromPath: "pos x")!.value = x
+//            instance.numberProperty(fromPath: "pos y")!.value = y
+//            riveModel.stateMachine!.bind(viewModelInstance: instance)
         }
     }
     
